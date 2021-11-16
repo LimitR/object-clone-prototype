@@ -1,3 +1,4 @@
+'use strict'
 module.exports = (
     Object.prototype.clone = function clone(writable = true){
         if (Array.isArray(this)){
