@@ -1,0 +1,23 @@
+{
+  "name": "object-clone-prototype",
+  "version": "1.0.0",
+  "description": "extend prototype object",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LimitR/object-clone-prototype.git"
+  },
+  "keywords": [
+    "clone",
+    "object"
+  ],
+  "author": "LimitR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LimitR/object-clone-prototype/issues"
+  },
+  "homepage": "https://github.com/LimitR/object-clone-prototype#readme"
+}
