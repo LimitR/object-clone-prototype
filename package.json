@@ -1,6 +1,6 @@
 {
   "name": "object-clone-prototype",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "extend prototype object",
   "main": "index.js",
   "scripts": {
