@@ -7,12 +7,10 @@ module.exports = (
             return this.bind(this)
         }
         if (typeof this === 'object'){
-            let new_object = {}
-            for (const [key, value] of Object.entries(this)) {
-                new_object[key] = {value: value, enumerable: true, writable: writable ? true : false}
-            }
-            return Object.create(Object.getPrototypeOf(this),  new_object )
+            return Object.create(Object.getPrototypeOf(this), Object.entries(this).reduce((accumulator, [key, value])=>{
+                accumulator[key] = {value: value, enumerable: true, writable: writable ? true : false}
+                return accumulator
+            }, {}) )
         }
-
     }
 )
