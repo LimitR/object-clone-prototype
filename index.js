@@ -8,10 +8,14 @@ module.exports = (
             return this.bind(this)
         }
         if (typeof this === 'object'){
-            return Object.create(Object.getPrototypeOf(this), Object.entries(this).reduce((accumulator, [key, value])=>{
-                accumulator[key] = {value: value, enumerable: true, writable: writable ? true : false}
-                return accumulator
-            }, {}) )
+            if(writable === true ){
+                return Object.create(Object.getPrototypeOf(this), Object.getOwnPropertyDescriptors(this) )
+            }else {
+                return Object.create(Object.getPrototypeOf(this), Object.entries(this).reduce((accumulator, [key, value]) => {
+                    accumulator[key] = {value: value, enumerable: true, writable: false}
+                    return accumulator
+                }, {}))
+            }
         }
     }
 )
