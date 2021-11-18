@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edf64de2-9b12-46c4-8031-d4996ddc042b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../client-frontend-flo-site/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-frontend-flo-site/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-frontend-flo-site/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client-frontend-flo-site/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-frontend-flo-site/src/components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client-frontend-flo-site/src/components/Card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-frontend-flo-site/src/components/ProductItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client-frontend-flo-site/src/components/ProductItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-frontend-flo-site/src/components/ProductPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client-frontend-flo-site/src/components/ProductPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-frontend-flo-site/src/components/styles/ProductItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client-frontend-flo-site/src/components/styles/ProductItem.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-frontend-flo-site/src/components/ubautPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client-frontend-flo-site/src/components/ubautPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
@@ -67,6 +61,8 @@
       <workItem from="1637086611202" duration="89000" />
       <workItem from="1637171855011" duration="128000" />
       <workItem from="1637172784005" duration="3716000" />
+      <workItem from="1637205193708" duration="102000" />
+      <workItem from="1637207991943" duration="184000" />
     </task>
     <servers />
   </component>
