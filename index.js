@@ -4,31 +4,53 @@ module.exports = (
         Array.from(arguments).forEach((element)=>{
             Object.defineProperty(element, 'clone', {
                 value: function (writable = true) {
-                    if (Array.isArray(this)) {
-                        return Array.from(this)
-                    }
-                    if (typeof this === 'function') {
-                        return this.bind(this)
-                    }
                     if (typeof this === 'object') {
-                        if (writable === true) {
-                            return Object.create(Object.getPrototypeOf(this), Object.getOwnPropertyDescriptors(this))
-                        } else {
-                            return Object.create(Object.getPrototypeOf(this), Object.entries(this).reduce((accumulator, [key, value]) => {
-                                accumulator[key] = {
-                                    value: value,
-                                    enumerable: true,
-                                    writable: false
-                                }
-                                return accumulator
-                            }, {}))
-                        }
+                        return  chekObject(this, writable)
                     }
                 },
-                writable: false,
+                writable: true,
                 enumerable: false
             })
         })
         return arguments[0].clone(this)
     }
 )
+
+function chekObject(object_value, writable){
+    return Object.create(Object.prototype, Object.entries(object_value).reduce((accumulator, [key, value])=>{
+        if(Array.isArray(value)){
+            if(value.filter((element)=> typeof element === 'object').length > 0
+                &&
+                value.filter((element)=> !Array.isArray(element))
+            ){
+                accumulator[key] = {
+                    value: [value.filter((element)=> typeof element != 'object'), chekObject(value.filter((element)=> typeof element === 'object'))[0]],
+                    enumerable: true,
+                    writable: writable
+                }
+                return accumulator
+            }else{
+                accumulator[key] = {
+                    value: value.slice(),
+                    enumerable: true,
+                    writable: writable
+                }
+                return accumulator
+            }
+        }else if(typeof value === 'object'){
+            accumulator[key] = {
+                value: chekObject(value),
+                enumerable: true,
+                writable: writable
+            }
+            return accumulator
+        }else{
+            accumulator[key] = {
+                value: value,
+                enumerable: true,
+                writable: writable
+            }
+            return accumulator
+        }
+    }, {}))
+}
