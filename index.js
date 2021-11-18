@@ -30,5 +30,6 @@ module.exports = (
             writable: false,
             enumerable: false
         })
+        return object.clone()
     }
 )
