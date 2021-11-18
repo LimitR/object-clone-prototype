@@ -24,7 +24,7 @@ function chekObject(object_value, writable){
                 value.filter((element)=> !Array.isArray(element))
             ){
                 accumulator[key] = {
-                    value: [value.filter((element)=> typeof element != 'object'), chekObject(value.filter((element)=> typeof element === 'object'))[0]],
+                    value: [value.filter((element)=> typeof element != 'object'), chekObject(value.filter((element)=> typeof element === 'object'), writable)[0]],
                     enumerable: true,
                     writable: writable
                 }
@@ -39,7 +39,7 @@ function chekObject(object_value, writable){
             }
         }else if(typeof value === 'object'){
             accumulator[key] = {
-                value: chekObject(value),
+                value: chekObject(value, writable),
                 enumerable: true,
                 writable: writable
             }
